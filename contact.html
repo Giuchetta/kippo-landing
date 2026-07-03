@@ -87,6 +87,33 @@
         .story-gradient {
             background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
         }
+        .brand-logo-mask {
+            position: relative;
+            width: 55px;
+            height: 80px;
+            overflow: hidden;
+            flex: none;
+        }
+        .brand-logo-image {
+            position: absolute;
+            top: -22px;
+            left: -43px;
+            width: 144px;
+            height: 144px;
+            max-width: none;
+        }
+        @media (min-width: 640px) {
+            .brand-logo-mask {
+                width: 61px;
+                height: 89px;
+            }
+            .brand-logo-image {
+                top: -24px;
+                left: -48px;
+                width: 160px;
+                height: 160px;
+            }
+        }
         html {
             scroll-behavior: smooth;
         }
@@ -94,9 +121,11 @@
 </head>
 <body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
 <nav class="fixed top-0 w-full z-50 glass-nav">
-<div class="flex justify-between items-center px-6 py-2 max-w-7xl mx-auto gap-4">
+<div class="flex justify-between items-center px-6 py-1 max-w-7xl mx-auto gap-4">
 <a class="flex items-center gap-3 shrink-0" href="index.html#top" aria-label="Kippo home">
-<img src="assets/kippo-the-hippo.png" alt="Kippo hippo logo" class="h-36 w-36 sm:h-40 sm:w-40 object-contain" width="256" height="256"/>
+<span class="brand-logo-mask" aria-hidden="true">
+<img src="assets/kippo-the-hippo.png" alt="Kippo hippo logo" class="brand-logo-image object-contain" width="256" height="256"/>
+</span>
 <span class="text-2xl font-extrabold text-primary font-headline tracking-tight leading-none">Kippo</span>
 </a>
 <div class="flex items-center gap-3 sm:gap-4 shrink-0">
