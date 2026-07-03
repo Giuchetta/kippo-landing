@@ -92,15 +92,15 @@
         }
     </style>
 </head>
-<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<body id="top" class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
 
 <!-- TopAppBar -->
 <nav class="fixed top-0 w-full z-50 glass-nav">
 <div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto gap-4">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary text-3xl" data-icon="auto_stories">auto_stories</span>
-<span class="text-2xl font-extrabold text-primary font-headline tracking-tight">Kippo</span>
-</div>
+<a class="flex items-center gap-3 shrink-0" href="#top" aria-label="Kippo home">
+<img src="assets/kippo-the-hippo.png" alt="Kippo hippo logo" class="h-10 w-10 sm:h-11 sm:w-11 object-contain" width="256" height="256"/>
+<span class="text-2xl font-extrabold text-primary font-headline tracking-tight leading-none">Kippo</span>
+</a>
 <div class="hidden md:flex items-center gap-8">
 <a class="text-[#625f58] transition-opacity duration-300 hover:opacity-80" href="#how-it-works">How It Works</a>
 <a class="text-[#625f58] transition-opacity duration-300 hover:opacity-80" href="#features">Features</a>
