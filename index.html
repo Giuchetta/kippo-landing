@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Kippo | Personalized Audio Stories for Your Child</title>
-<meta name="description" content="Kippo creates personalized audio stories starring your child — with professional narration, original music, and immersive sound effects. Try it free.">
+<meta name="description" content="Kippo creates personalized audio stories starring your child — with professional narration and original music. Try it free.">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
@@ -14,57 +14,57 @@
         theme: {
           extend: {
             colors: {
-              "on-secondary-fixed-variant": "#805100",
-              "secondary-container": "#ffddb6",
-              "on-secondary": "#fff7f3",
+              "on-secondary-fixed-variant": "#1e3a8a",
+              "secondary-container": "#dbeafe",
+              "on-secondary": "#eff6ff",
               "on-surface": "#34322c",
-              "secondary-fixed": "#ffddb6",
-              "on-primary-container": "#48248d",
-              "tertiary": "#246585",
-              "primary-dim": "#5f3ea5",
+              "secondary-fixed": "#dbeafe",
+              "on-primary-container": "#1e3a8a",
+              "tertiary": "#1d4ed8",
+              "primary-dim": "#1e40af",
               "error-dim": "#770326",
               "background": "#fef9f3",
-              "on-primary-fixed-variant": "#512f96",
-              "on-primary": "#fdf7ff",
+              "on-primary-fixed-variant": "#1e3a8a",
+              "on-primary": "#eff6ff",
               "surface-container-high": "#ede8df",
-              "on-tertiary-container": "#004d6a",
+              "on-tertiary-container": "#1e3a8a",
               "surface-container": "#f2ede6",
-              "secondary": "#855500",
-              "secondary-dim": "#754a00",
-              "primary-fixed": "#ccb5ff",
-              "primary": "#6b4bb2",
+              "secondary": "#1e40af",
+              "secondary-dim": "#1d4ed8",
+              "primary-fixed": "#93c5fd",
+              "primary": "#2563eb",
               "surface": "#fef9f3",
               "outline": "#7e7a73",
-              "tertiary-dim": "#115978",
+              "tertiary-dim": "#2563eb",
               "surface-container-lowest": "#ffffff",
               "error": "#ac3149",
               "outline-variant": "#b6b1a9",
-              "on-tertiary-fixed": "#00394f",
+              "on-tertiary-fixed": "#1e3a8a",
               "surface-dim": "#dfd9cf",
               "on-background": "#34322c",
               "surface-container-low": "#f8f3ec",
-              "on-secondary-fixed": "#5a3800",
-              "inverse-primary": "#ac8bf7",
+              "on-secondary-fixed": "#1e3a8a",
+              "inverse-primary": "#3b82f6",
               "surface-variant": "#e7e2d9",
               "error-container": "#f76a80",
-              "primary-container": "#ccb5ff",
-              "primary-fixed-dim": "#c0a4ff",
-              "on-tertiary": "#f4f9ff",
+              "primary-container": "#dbeafe",
+              "primary-fixed-dim": "#60a5fa",
+              "on-tertiary": "#eff6ff",
               "on-error": "#fff7f7",
               "inverse-on-surface": "#a09c97",
-              "tertiary-container": "#9ed9fe",
+              "tertiary-container": "#bfdbfe",
               "surface-container-highest": "#e7e2d9",
-              "on-tertiary-fixed-variant": "#0b5776",
-              "tertiary-fixed": "#9ed9fe",
-              "on-secondary-container": "#734900",
+              "on-tertiary-fixed-variant": "#1d4ed8",
+              "tertiary-fixed": "#bfdbfe",
+              "on-secondary-container": "#1e3a8a",
               "surface-bright": "#fef9f3",
               "inverse-surface": "#0f0e0b",
               "on-surface-variant": "#625f58",
-              "tertiary-fixed-dim": "#90cbef",
-              "on-primary-fixed": "#320278",
+              "tertiary-fixed-dim": "#93c5fd",
+              "on-primary-fixed": "#1e3a8a",
               "on-error-container": "#68001f",
-              "secondary-fixed-dim": "#ffcb8b",
-              "surface-tint": "#6b4bb2"
+              "secondary-fixed-dim": "#93c5fd",
+              "surface-tint": "#2563eb"
             },
             fontFamily: {
               "headline": ["Plus Jakarta Sans"],
@@ -85,7 +85,7 @@
             backdrop-filter: blur(20px);
         }
         .story-gradient {
-            background: linear-gradient(135deg, #6b4bb2 0%, #ccb5ff 100%);
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
         }
         html {
             scroll-behavior: smooth;
@@ -98,16 +98,17 @@
 <nav class="fixed top-0 w-full z-50 glass-nav">
 <div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto gap-4">
 <div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[#6b4bb2] text-3xl" data-icon="auto_stories">auto_stories</span>
-<span class="text-2xl font-extrabold text-[#6b4bb2] font-headline tracking-tight">Kippo</span>
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="auto_stories">auto_stories</span>
+<span class="text-2xl font-extrabold text-primary font-headline tracking-tight">Kippo</span>
 </div>
 <div class="hidden md:flex items-center gap-8">
 <a class="text-[#625f58] transition-opacity duration-300 hover:opacity-80" href="#how-it-works">How It Works</a>
 <a class="text-[#625f58] transition-opacity duration-300 hover:opacity-80" href="#features">Features</a>
 <a class="text-[#625f58] transition-opacity duration-300 hover:opacity-80" href="#pricing">Pricing</a>
+<a class="text-[#625f58] transition-opacity duration-300 hover:opacity-80" href="#faq">FAQ</a>
 </div>
 <div class="flex items-center gap-3 sm:gap-4 shrink-0">
-<a href="https://app.getkippo.com/login" class="text-sm sm:text-base font-semibold text-[#6b4bb2] underline underline-offset-4 decoration-[#6b4bb2]/30 hover:decoration-[#6b4bb2] transition-colors duration-300 whitespace-nowrap">
+<a href="https://app.getkippo.com/login" class="text-sm sm:text-base font-semibold text-primary underline underline-offset-4 decoration-primary/30 hover:decoration-primary transition-colors duration-300 whitespace-nowrap">
     Log in
 </a>
 <a href="https://app.getkippo.com/login?mode=signup" class="bg-primary text-on-primary px-5 sm:px-8 py-3 rounded-lg font-semibold hover:opacity-90 active:scale-95 transition-all duration-300 shadow-sm inline-block whitespace-nowrap text-sm sm:text-base">
@@ -130,7 +131,7 @@
     Turn Your Child Into the <span class="text-primary">Hero</span> of Their Own Story.
 </h1>
 <p class="text-xl text-on-surface-variant max-w-lg leading-relaxed">
-    Personalized audio stories with professional narration, original music, and immersive sound effects — created in minutes, treasured forever.
+    Personalized audio stories with professional narration and original music — created in minutes, treasured forever.
 </p>
 <div class="flex flex-col sm:flex-row gap-4 pt-4">
 <a href="https://app.getkippo.com/login?mode=signup" class="bg-primary text-on-primary px-10 py-5 rounded-lg text-lg font-bold hover:opacity-90 transition-all shadow-lg shadow-primary/10 text-center">
@@ -172,7 +173,7 @@
 <span class="material-symbols-outlined text-3xl" data-icon="headphones">headphones</span>
 </div>
 <h3 class="text-xl font-bold mb-3">Listen &amp; Share</h3>
-<p class="text-on-surface-variant leading-relaxed">Your story is ready — with narration, music, and sound effects. Save it, download it, or share a link with family instantly.</p>
+<p class="text-on-surface-variant leading-relaxed">Your story is ready — with narration and music. Save it, download it, or share a link with family instantly.</p>
 </div>
 </div>
 </div>
@@ -200,7 +201,7 @@
 <span class="material-symbols-outlined text-tertiary text-4xl" data-icon="surround_sound">surround_sound</span>
 <div>
 <h3 class="text-2xl font-bold mb-2">Immersive Audio</h3>
-<p class="text-on-surface-variant">Professional narration, original music, and immersive sound effects that bring every scene to life.</p>
+<p class="text-on-surface-variant">Professional narration and original music that bring every scene to life.</p>
 </div>
 </div>
 <!-- Family Sharing -->
@@ -270,7 +271,7 @@
 <h2 class="font-headline text-4xl font-bold text-center mb-16">What Parents Are Saying</h2>
 <div class="grid md:grid-cols-3 gap-8">
 <div class="bg-surface p-8 rounded-xl shadow-sm border border-outline-variant/10">
-<div class="flex text-secondary mb-4">
+<div class="flex text-primary mb-4">
 <span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
 <span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
 <span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
@@ -287,7 +288,7 @@
 </div>
 </div>
 <div class="bg-surface p-8 rounded-xl shadow-sm border border-outline-variant/10">
-<div class="flex text-secondary mb-4">
+<div class="flex text-primary mb-4">
 <span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
 <span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
 <span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
@@ -296,7 +297,7 @@
 </div>
 <p class="italic text-on-surface-variant mb-6 leading-relaxed">"I sent a story link to my parents across the country. They were in tears hearing a story about their grandkids. No app download, no account — just clicked and listened."</p>
 <div class="flex items-center gap-4">
-<div class="w-10 h-10 rounded-full bg-secondary-container"></div>
+<div class="w-10 h-10 rounded-full bg-primary-container"></div>
 <div>
 <p class="font-bold">David L.</p>
 <p class="text-xs text-outline">Parent of two</p>
@@ -304,16 +305,16 @@
 </div>
 </div>
 <div class="bg-surface p-8 rounded-xl shadow-sm border border-outline-variant/10">
-<div class="flex text-secondary mb-4">
+<div class="flex text-primary mb-4">
 <span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
 <span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
 <span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
 <span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
 <span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
 </div>
-<p class="italic text-on-surface-variant mb-6 leading-relaxed">"The sound effects and music are incredible — it sounds like a real audiobook production, not some robot reading a script. My daughter thinks it's pure magic."</p>
+<p class="italic text-on-surface-variant mb-6 leading-relaxed">"I watched my daughter take care of her baby sister today--stopping her before she climbed too far up the stairs--the exact same way she heard it in Kippo."</p>
 <div class="flex items-center gap-4">
-<div class="w-10 h-10 rounded-full bg-tertiary-container"></div>
+<div class="w-10 h-10 rounded-full bg-primary-container"></div>
 <div>
 <p class="font-bold">Jessica R.</p>
 <p class="text-xs text-outline">Parent of a 7-year-old</p>
@@ -340,7 +341,6 @@
 </div>
 <ul class="space-y-4 mb-10 flex-grow text-sm">
 <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span> 1 story per month</li>
-<li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span> 3 preset narrator voices</li>
 <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span> Listen in-app</li>
 <li class="flex items-start gap-2 text-outline-variant"><span class="material-symbols-outlined text-lg" data-icon="cancel">cancel</span> No downloads</li>
 <li class="flex items-start gap-2 text-outline-variant"><span class="material-symbols-outlined text-lg" data-icon="cancel">cancel</span> No voice cloning</li>
@@ -356,10 +356,8 @@
 </div>
 <ul class="space-y-4 mb-10 flex-grow text-sm">
 <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span> 3 stories per month</li>
-<li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span> All narrator voices</li>
 <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span> Download stories</li>
 <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span> Share with family</li>
-<li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span> $1.99 per extra story</li>
 </ul>
 <a href="https://app.getkippo.com/login?mode=signup&plan=storyteller" class="w-full py-4 rounded-lg bg-surface-container-highest font-bold text-primary hover:bg-primary-container transition-colors text-center block">Get Started</a>
 </div>
@@ -374,9 +372,7 @@
 <ul class="space-y-4 mb-10 flex-grow text-sm">
 <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span> 8 stories per month</li>
 <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span> Everything in Storyteller</li>
-<li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span> Clone your own voice</li>
-<li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span> Premium narrator voices</li>
-<li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span> $1.49 per extra story</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span> 1 cloned voice</li>
 </ul>
 <a href="https://app.getkippo.com/login?mode=signup&plan=storyteller_plus" class="w-full py-4 rounded-lg bg-primary font-bold text-on-primary hover:opacity-90 shadow-lg shadow-primary/20 transition-all text-center block">Get Started</a>
 </div>
@@ -390,11 +386,54 @@
 <ul class="space-y-4 mb-10 flex-grow text-sm">
 <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span> 20 stories per month</li>
 <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span> Everything in Storyteller+</li>
-<li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span> Unlimited sharing</li>
-<li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span> Priority generation</li>
-<li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span> $0.99 per extra story</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span> 5 cloned voices</li>
 </ul>
 <a href="https://app.getkippo.com/login?mode=signup&plan=family" class="w-full py-4 rounded-lg bg-surface-container-highest font-bold text-primary hover:bg-primary-container transition-colors text-center block">Get Started</a>
+</div>
+</div>
+<div class="mt-10 rounded-2xl story-gradient p-[1px]">
+<div class="rounded-2xl bg-surface px-6 py-5 md:px-8 md:py-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+<div>
+<p class="font-bold text-on-surface">Your story library is yours forever.</p>
+<p class="text-on-surface-variant">Even if you stop paying, you never lose the stories you created.</p>
+</div>
+<a href="https://app.getkippo.com/login?mode=signup" class="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-3 font-semibold text-on-primary hover:opacity-90 transition-opacity">Start with a free story</a>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="py-24 px-6 bg-surface-container-low rounded-[3rem]">
+<div class="max-w-5xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+<h2 class="font-headline text-4xl font-bold">Questions Parents Ask</h2>
+<p class="text-on-surface-variant">Short answers on how Kippo works, what families get, and how we handle privacy.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-6">
+<div class="bg-surface rounded-xl p-8 shadow-sm border border-outline-variant/10">
+<h3 class="text-xl font-bold mb-3">What is Kippo?</h3>
+<p class="text-on-surface-variant leading-relaxed">Kippo creates personalized audio stories starring your child. Each story is made for listening, with warm narration, original music, and details pulled from your child’s world.</p>
+</div>
+<div class="bg-surface rounded-xl p-8 shadow-sm border border-outline-variant/10">
+<h3 class="text-xl font-bold mb-3">How does personalization work?</h3>
+<p class="text-on-surface-variant leading-relaxed">You share a few simple details like your child’s name, age, interests, and personality. Kippo uses that to shape stories that feel familiar, encouraging, and made just for them.</p>
+</div>
+<div class="bg-surface rounded-xl p-8 shadow-sm border border-outline-variant/10">
+<h3 class="text-xl font-bold mb-3">How does voice cloning work?</h3>
+<p class="text-on-surface-variant leading-relaxed">On eligible plans, you can create a cloned voice so stories sound even more personal. It’s optional, parent-controlled, and only available on plans that include cloned voices.</p>
+</div>
+<div class="bg-surface rounded-xl p-8 shadow-sm border border-outline-variant/10">
+<h3 class="text-xl font-bold mb-3">How many stories come with each plan?</h3>
+<p class="text-on-surface-variant leading-relaxed">Free includes 1 story each month. Storyteller includes 3, Storyteller+ includes 8 and 1 cloned voice, and Family includes 20 stories plus 5 cloned voices.</p>
+</div>
+<div class="bg-surface rounded-xl p-8 shadow-sm border border-outline-variant/10">
+<h3 class="text-xl font-bold mb-3">Can I cancel anytime?</h3>
+<p class="text-on-surface-variant leading-relaxed">Yes. You can cancel whenever you want, and there’s no long-term commitment. Your existing stories stay in your library even after a paid plan ends.</p>
+</div>
+<div class="bg-surface rounded-xl p-8 shadow-sm border border-outline-variant/10">
+<h3 class="text-xl font-bold mb-3">How does Kippo protect kids’ privacy?</h3>
+<p class="text-on-surface-variant leading-relaxed">Kippo is built for families with child privacy in mind. We keep data handling tight, avoid ads and third-party tracking, and design the product to support COPPA-conscious use.</p>
+</div>
 </div>
 </div>
 </section>
@@ -416,32 +455,30 @@
 <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
 <div class="space-y-6">
 <div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[#6b4bb2] text-2xl" data-icon="auto_stories">auto_stories</span>
-<span class="text-lg font-bold text-[#6b4bb2]">Kippo</span>
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="auto_stories">auto_stories</span>
+<span class="text-lg font-bold text-primary">Kippo</span>
 </div>
 <p class="text-[#625f58] leading-relaxed">Personalized audio stories that spark imagination, teach values, and make bedtime magical.</p>
-<p class="text-[#625f58] text-sm">dino@getkippo.com</p>
 </div>
 <div>
-<h4 class="font-bold mb-6 text-[#6b4bb2]">Product</h4>
+<h4 class="font-bold mb-6 text-primary">Product</h4>
 <ul class="space-y-4 text-[#625f58]">
-<li><a class="hover:text-[#6b4bb2] transition-colors" href="#how-it-works">How It Works</a></li>
-<li><a class="hover:text-[#6b4bb2] transition-colors" href="#features">Features</a></li>
-<li><a class="hover:text-[#6b4bb2] transition-colors" href="#pricing">Pricing</a></li>
+<li><a class="hover:text-primary transition-colors" href="#how-it-works">How It Works</a></li>
+<li><a class="hover:text-primary transition-colors" href="#features">Features</a></li>
+<li><a class="hover:text-primary transition-colors" href="#pricing">Pricing</a></li>
 </ul>
 </div>
 <div>
-<h4 class="font-bold mb-6 text-[#6b4bb2]">Support</h4>
+<h4 class="font-bold mb-6 text-primary">Support</h4>
 <ul class="space-y-4 text-[#625f58]">
-<li><a class="hover:text-[#6b4bb2] transition-colors" href="mailto:dino@getkippo.com">Contact Us</a></li>
-<li><a class="hover:text-[#6b4bb2] transition-colors" href="#">FAQ</a></li>
+<li><a class="hover:text-primary transition-colors" href="#faq">FAQ</a></li>
 </ul>
 </div>
 <div>
-<h4 class="font-bold mb-6 text-[#6b4bb2]">Legal</h4>
+<h4 class="font-bold mb-6 text-primary">Legal</h4>
 <ul class="space-y-4 text-[#625f58]">
-<li><a class="hover:text-[#6b4bb2] transition-colors" href="#">Privacy Policy</a></li>
-<li><a class="hover:text-[#6b4bb2] transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary transition-colors" href="https://app.getkippo.com/privacy">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="https://app.getkippo.com/terms">Terms of Service</a></li>
 </ul>
 </div>
 </div>
