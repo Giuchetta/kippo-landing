@@ -99,17 +99,17 @@
         }
         body {
             background:
-                radial-gradient(circle at top left, rgba(255, 184, 77, 0.22), transparent 28%),
-                radial-gradient(circle at 85% 12%, rgba(127, 215, 193, 0.18), transparent 24%),
-                linear-gradient(180deg, #fffaf4 0%, #fff6ee 45%, #fffaf4 100%);
+                radial-gradient(circle at top left, rgba(255, 184, 77, 0.16), transparent 26%),
+                radial-gradient(circle at 85% 12%, rgba(127, 215, 193, 0.14), transparent 22%),
+                linear-gradient(180deg, #fbfdff 0%, #f7fbff 44%, #fbfdff 100%);
         }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
         }
         .glass-nav {
-            background: rgba(255, 250, 244, 0.72);
+            background: rgba(251, 253, 255, 0.76);
             backdrop-filter: blur(18px);
-            border-bottom: 1px solid rgba(217, 201, 183, 0.35);
+            border-bottom: 1px solid rgba(207, 226, 255, 0.4);
         }
         .brand-logo-mask {
             position: relative;
@@ -148,17 +148,19 @@
             position: absolute;
             inset: 0;
             pointer-events: none;
-            opacity: 0.5;
+            opacity: 0.42;
         }
         .wave-top::before {
             background:
-                radial-gradient(circle at 12% -8%, rgba(255, 184, 77, 0.2), transparent 24%),
-                radial-gradient(circle at 90% 0%, rgba(127, 215, 193, 0.18), transparent 20%);
+                radial-gradient(circle at 12% -8%, rgba(255, 184, 77, 0.14), transparent 24%),
+                radial-gradient(circle at 90% 0%, rgba(127, 215, 193, 0.12), transparent 20%),
+                linear-gradient(180deg, rgba(255,255,255,0.7), rgba(234,243,255,0.18));
         }
         .patchwork::before {
             background:
-                radial-gradient(circle at 8% 15%, rgba(255, 95, 143, 0.13), transparent 20%),
-                radial-gradient(circle at 88% 80%, rgba(37, 99, 235, 0.13), transparent 22%);
+                radial-gradient(circle at 8% 15%, rgba(255, 95, 143, 0.1), transparent 20%),
+                radial-gradient(circle at 88% 80%, rgba(37, 99, 235, 0.1), transparent 22%),
+                linear-gradient(180deg, rgba(255,255,255,0.7), rgba(238,247,255,0.24));
         }
         .night-sky::before {
             background:
@@ -177,8 +179,8 @@
             width: 28px;
             height: 28px;
             background: inherit;
-            border-right: 1px solid rgba(217, 201, 183, 0.3);
-            border-bottom: 1px solid rgba(217, 201, 183, 0.3);
+            border-right: 1px solid rgba(207, 226, 255, 0.38);
+            border-bottom: 1px solid rgba(207, 226, 255, 0.38);
             transform: rotate(45deg);
             border-bottom-right-radius: 12px;
         }
@@ -243,8 +245,47 @@
             right: -20px;
             width: 96px;
             height: 96px;
-            background: rgba(255, 184, 77, 0.12);
+            background: rgba(37, 99, 235, 0.08);
             border-radius: 9999px;
+        }
+        .arc-section {
+            position: relative;
+        }
+        .arc-section::before,
+        .arc-section::after {
+            content: "";
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            border-radius: 9999px;
+            pointer-events: none;
+            opacity: 0.55;
+        }
+        .arc-section::before {
+            top: -56px;
+            left: -60px;
+            background: radial-gradient(circle, rgba(255, 184, 77, 0.16), transparent 68%);
+        }
+        .arc-section::after {
+            right: -64px;
+            bottom: -54px;
+            background: radial-gradient(circle, rgba(127, 215, 193, 0.16), transparent 68%);
+        }
+        .trust-ribbon {
+            position: relative;
+        }
+        .trust-ribbon::before {
+            content: "";
+            position: absolute;
+            inset: 14px auto 14px 50%;
+            width: 1px;
+            background: linear-gradient(180deg, transparent, rgba(207, 226, 255, 0.9), transparent);
+            display: none;
+        }
+        @media (min-width: 1024px) {
+            .trust-ribbon::before {
+                display: block;
+            }
         }
         @media (min-width: 640px) {
             .brand-logo-mask {
@@ -346,13 +387,14 @@
 </div>
 </section>
 
-<section id="how-it-works" class="section-shell wave-top bg-[#fff1dd] py-24 px-6 rounded-[3.5rem] mx-4 sm:mx-6 md:mx-8">
+<section id="how-it-works" class="section-shell wave-top bg-[linear-gradient(180deg,#ffffff_0%,#f3f9ff_100%)] py-24 px-6 rounded-[3.5rem] mx-4 sm:mx-6 md:mx-8 border border-[#dcecff]/80 shadow-card">
 <div class="max-w-7xl mx-auto relative">
-<div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+<div class="md:grid md:grid-cols-[minmax(0,0.78fr)_minmax(0,1.22fr)] md:gap-12 md:items-start">
+<div class="max-w-xl mb-14 md:mb-0 space-y-4 md:sticky md:top-28">
 <h2 class="font-headline text-4xl md:text-5xl font-bold">Magic in Minutes</h2>
 <p class="text-on-surface-variant">Every child wants to be the hero. Kippo makes it real — personalized audio adventures where your child stars in a story that's not just fun, but can gently teach the lessons that matter to your family.</p>
 </div>
-<div class="grid md:grid-cols-3 gap-8 lg:gap-10">
+<div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-10">
 <div class="flex flex-col items-center text-center p-8 rounded-[2.5rem] bg-white transition-transform hover:-translate-y-2 duration-300 shadow-card border border-white/80 md:rotate-[-2deg]">
 <div class="story-icon story-icon-star mb-6">
 <span class="material-symbols-outlined text-primary text-[42px]" data-icon="edit_note">edit_note</span>
@@ -379,7 +421,7 @@
 </section>
 
 <section id="features" class="section-shell patchwork py-24 px-6 max-w-7xl mx-auto">
-<div class="mb-16 max-w-2xl">
+<div class="mb-16 max-w-2xl ml-auto text-left md:text-right">
 <p class="inline-flex items-center gap-2 rounded-full bg-[#ffe8c3] px-4 py-2 text-sm font-semibold text-[#9a5a00] shadow-sm">
 <span class="material-symbols-outlined text-base text-[#c77600]" data-icon="toys">toys</span>
 Designed for delight
@@ -387,8 +429,8 @@ Designed for delight
 <h2 class="font-headline text-4xl md:text-5xl font-bold mt-5 mb-4">Crafted for Families</h2>
 <p class="text-on-surface-variant">Stories that feel handmade, powered by technology that's invisible.</p>
 </div>
-<div class="grid md:grid-cols-3 gap-6 auto-rows-fr">
-<div class="md:col-span-2 rounded-[2.75rem] p-10 sm:p-12 text-on-primary flex flex-col justify-between min-h-[400px] overflow-hidden relative bg-[linear-gradient(135deg,#2563eb_0%,#4f7ff7_40%,#5f7cff_100%)] shadow-play">
+<div class="grid md:grid-cols-6 gap-6 auto-rows-fr">
+<div class="md:col-span-4 rounded-[2.75rem] p-10 sm:p-12 text-on-primary flex flex-col justify-between min-h-[400px] overflow-hidden relative bg-[linear-gradient(135deg,#2563eb_0%,#4f7ff7_40%,#5f7cff_100%)] shadow-play">
 <div class="absolute top-6 right-8 w-28 h-28 rounded-full bg-white/10"></div>
 <div class="absolute bottom-8 left-8 w-16 h-16 rounded-full bg-sun/80"></div>
 <div class="absolute -right-20 -bottom-20 w-72 h-72 bg-white/10 rounded-full"></div>
@@ -405,7 +447,7 @@ Designed for delight
 <span class="rounded-full bg-white/16 px-4 py-2">Family values</span>
 </div>
 </div>
-<div class="bg-[#fff2df] rounded-[2.5rem] p-8 flex flex-col justify-between min-h-[220px] shadow-card border border-[#ffd7cd]/45">
+<div class="md:col-span-2 bg-white rounded-[2.5rem] p-8 flex flex-col justify-between min-h-[220px] shadow-card border border-[#dcecff]/75">
 <div class="feature-icon bg-[#ffd7cd] text-primary">
 <span class="material-symbols-outlined text-[36px]" data-icon="surround_sound">surround_sound</span>
 </div>
@@ -414,7 +456,7 @@ Designed for delight
 <p class="text-on-surface-variant">Professional narration and original music that bring every scene to life.</p>
 </div>
 </div>
-<div class="bg-[#e7f8f2] rounded-[2.5rem] p-8 flex flex-col justify-between min-h-[220px] shadow-card border border-[#bde9da]/55 md:translate-y-6">
+<div class="md:col-span-2 bg-[#f5fbff] rounded-[2.5rem] p-8 flex flex-col justify-between min-h-[220px] shadow-card border border-[#dcecff]/75 md:-translate-y-3">
 <div class="feature-icon bg-white text-[#128067]">
 <span class="material-symbols-outlined text-[36px]" data-icon="family_history">family_history</span>
 </div>
@@ -423,7 +465,7 @@ Designed for delight
 <p class="text-on-surface-variant">Send a link to grandparents, aunts, and uncles. They can listen instantly — no account needed.</p>
 </div>
 </div>
-<div class="bg-white rounded-[2.5rem] p-8 flex flex-col justify-between min-h-[220px] shadow-card border border-[#d9c9b7]/35">
+<div class="md:col-span-2 bg-white rounded-[2.5rem] p-8 flex flex-col justify-between min-h-[220px] shadow-card border border-[#dcecff]/75">
 <div class="feature-icon bg-[#eaf3ff] text-primary">
 <span class="material-symbols-outlined text-[36px]" data-icon="library_books">library_books</span>
 </div>
@@ -432,7 +474,7 @@ Designed for delight
 <p class="text-on-surface-variant">Every story is saved. Replay favorites anytime and build a collection over time.</p>
 </div>
 </div>
-<div class="bg-[linear-gradient(135deg,#ff8e6e_0%,#ffb84d_100%)] rounded-[2.5rem] p-8 text-white flex flex-col justify-between min-h-[220px] shadow-float">
+<div class="md:col-span-2 md:row-span-2 bg-[linear-gradient(180deg,#ff8e6e_0%,#ffb84d_100%)] rounded-[2.75rem] p-8 text-white flex flex-col justify-between min-h-[320px] shadow-float">
 <div class="feature-icon bg-white/18 text-white">
 <span class="material-symbols-outlined text-[36px]" data-icon="phonelink_off">phonelink_off</span>
 </div>
@@ -445,7 +487,7 @@ Designed for delight
 </section>
 
 <section class="max-w-7xl mx-auto px-6 pb-10">
-<div class="rounded-[2.75rem] bg-[linear-gradient(135deg,#ffffff_0%,#fff7ed_46%,#edf6ff_100%)] p-6 sm:p-8 shadow-card border border-white/70">
+<div class="trust-ribbon rounded-[2.75rem] bg-[linear-gradient(135deg,#ffffff_0%,#f8fbff_64%,#eef7ff_100%)] p-6 sm:p-8 shadow-card border border-[#dcecff]/80">
 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
 <div class="flex items-center gap-4 rounded-[2rem] bg-white/90 p-4 border border-[#e9dccd]/55">
 <div class="feature-icon w-14 h-14 rounded-[1.25rem] bg-[#eaf3ff] text-primary text-2xl">
@@ -456,7 +498,7 @@ Designed for delight
 <p class="text-xs text-on-surface-variant">Child privacy protected</p>
 </div>
 </div>
-<div class="flex items-center gap-4 rounded-[2rem] bg-[#fff7ef] p-4 border border-[#ffe0a8]/65">
+<div class="flex items-center gap-4 rounded-[2rem] bg-[#fbfdff] p-4 border border-[#dcecff]/75">
 <div class="feature-icon w-14 h-14 rounded-[1.25rem] bg-[#ffe8c3] text-[#9a5a00] text-2xl">
 <span class="material-symbols-outlined" style="font-size: 28px;" data-icon="lock">lock</span>
 </div>
@@ -465,7 +507,7 @@ Designed for delight
 <p class="text-xs text-on-surface-variant">Your family's data is secure</p>
 </div>
 </div>
-<div class="flex items-center gap-4 rounded-[2rem] bg-[#fff0f4] p-4 border border-[#ffd2e0]/70">
+<div class="flex items-center gap-4 rounded-[2rem] bg-[#f8fbff] p-4 border border-[#dcecff]/75">
 <div class="feature-icon w-14 h-14 rounded-[1.25rem] bg-[#ffd2e0] text-[#d23564] text-2xl">
 <span class="material-symbols-outlined" style="font-size: 28px;" data-icon="block">block</span>
 </div>
@@ -474,7 +516,7 @@ Designed for delight
 <p class="text-xs text-on-surface-variant">No tracking, no third-party ads</p>
 </div>
 </div>
-<div class="flex items-center gap-4 rounded-[2rem] bg-[#ecfbf6] p-4 border border-[#c5efdf]/70">
+<div class="flex items-center gap-4 rounded-[2rem] bg-[#fbfdff] p-4 border border-[#dcecff]/75">
 <div class="feature-icon w-14 h-14 rounded-[1.25rem] bg-[#daf7ef] text-[#128067] text-2xl">
 <span class="material-symbols-outlined" style="font-size: 28px;" data-icon="shield">shield</span>
 </div>
@@ -487,10 +529,12 @@ Designed for delight
 </div>
 </section>
 
-<section class="section-shell bg-[#fff6ea] py-24 px-6 rounded-[3.25rem] mx-4 sm:mx-6 md:mx-8">
+<section class="section-shell arc-section bg-[linear-gradient(180deg,#ffffff_0%,#f6fbff_100%)] py-24 px-6 rounded-[3.25rem] mx-4 sm:mx-6 md:mx-8 border border-[#dcecff]/80 shadow-card">
 <div class="max-w-7xl mx-auto">
-<h2 class="font-headline text-4xl md:text-5xl font-bold text-center mb-16">What Parents Are Saying</h2>
-<div class="grid md:grid-cols-3 gap-10">
+<div class="md:flex md:items-end md:justify-between mb-16 gap-8">
+<h2 class="font-headline text-4xl md:text-5xl font-bold text-center md:text-left">What Parents Are Saying</h2>
+</div>
+<div class="grid md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)_minmax(0,0.9fr)] gap-10">
 <div class="speech-card bg-white p-8 rounded-[2.5rem] shadow-card border border-[#eadcc8]/60">
 <div class="flex text-[#ffb84d] mb-5 gap-1">
 <span class="material-symbols-outlined" data-icon="star">star</span>
@@ -508,7 +552,7 @@ Designed for delight
 </div>
 </div>
 </div>
-<div class="speech-card bg-[#eef7ff] p-8 rounded-[2.5rem] shadow-card border border-[#cfe2ff]/60 md:translate-y-8">
+<div class="speech-card bg-[#eef7ff] p-8 rounded-[2.5rem] shadow-card border border-[#cfe2ff]/60 md:-translate-y-5">
 <div class="flex text-[#ffb84d] mb-5 gap-1">
 <span class="material-symbols-outlined" data-icon="star">star</span>
 <span class="material-symbols-outlined" data-icon="star">star</span>
@@ -525,7 +569,7 @@ Designed for delight
 </div>
 </div>
 </div>
-<div class="speech-card bg-[#fff0f4] p-8 rounded-[2.5rem] shadow-card border border-[#ffd2e0]/60">
+<div class="speech-card bg-[#fff0f4] p-8 rounded-[2.5rem] shadow-card border border-[#ffd2e0]/60 md:translate-y-8">
 <div class="flex text-[#ffb84d] mb-5 gap-1">
 <span class="material-symbols-outlined" data-icon="star">star</span>
 <span class="material-symbols-outlined" data-icon="star">star</span>
@@ -619,13 +663,13 @@ Your story library is yours forever — even if you stop paying, the stories you
 </div>
 </section>
 
-<section id="faq" class="py-24 px-6 bg-[#fff0df] rounded-[3.25rem] mx-4 sm:mx-6 md:mx-8">
+<section id="faq" class="py-24 px-6 bg-[linear-gradient(180deg,#ffffff_0%,#f6fbff_100%)] rounded-[3.25rem] mx-4 sm:mx-6 md:mx-8 border border-[#dcecff]/80 shadow-card">
 <div class="max-w-5xl mx-auto">
-<div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+<div class="max-w-2xl mb-16 space-y-4">
 <h2 class="font-headline text-4xl md:text-5xl font-bold">Questions Parents Ask</h2>
 <p class="text-on-surface-variant">Short answers on how Kippo works, what families get, and how we handle privacy.</p>
 </div>
-<div class="grid md:grid-cols-2 gap-6">
+<div class="grid md:grid-cols-2 gap-6 items-start">
 <div class="cloud-card bg-white rounded-[2.25rem] p-8 shadow-card border border-white/75">
 <h3 class="text-xl font-bold mb-3">What is Kippo?</h3>
 <p class="text-on-surface-variant leading-relaxed">Kippo creates personalized audio stories starring your child. Each story is made for listening, with warm narration, original music, and details pulled from your child’s world.</p>
@@ -634,7 +678,7 @@ Your story library is yours forever — even if you stop paying, the stories you
 <h3 class="text-xl font-bold mb-3">How does personalization work?</h3>
 <p class="text-on-surface-variant leading-relaxed">You share a few simple details like your child’s name, age, interests, and personality. Kippo uses that to shape stories that feel familiar, encouraging, and made just for them.</p>
 </div>
-<div class="cloud-card bg-[#fff6ea] rounded-[2.25rem] p-8 shadow-card border border-[#ffe0a8]/70">
+<div class="cloud-card bg-[#fbfdff] rounded-[2.25rem] p-8 shadow-card border border-[#dcecff]/75">
 <h3 class="text-xl font-bold mb-3">How does voice cloning work?</h3>
 <p class="text-on-surface-variant leading-relaxed">On eligible plans, you can record your own voice so stories sound even more personal. It’s optional, parent-controlled, and only available on plans that include cloned voices.</p>
 </div>
@@ -646,7 +690,7 @@ Your story library is yours forever — even if you stop paying, the stories you
 <h3 class="text-xl font-bold mb-3">What if I run out of stories?</h3>
 <p class="text-on-surface-variant leading-relaxed">No problem — you can buy extra stories anytime for $2.99 each. They're added to your account instantly, never expire, and are only used after your monthly stories are gone.</p>
 </div>
-<div class="cloud-card bg-[#fff0f4] rounded-[2.25rem] p-8 shadow-card border border-[#ffd2e0]/75">
+<div class="cloud-card bg-[#fff0f4] rounded-[2.25rem] p-8 shadow-card border border-[#ffd2e0]/75 md:-translate-y-4">
 <h3 class="text-xl font-bold mb-3">Can I cancel anytime?</h3>
 <p class="text-on-surface-variant leading-relaxed">Yes. You can cancel whenever you want, and there's no long-term commitment. Your existing stories stay in your library and are accessible even after a paid plan ends.</p>
 </div>
@@ -659,7 +703,7 @@ Your story library is yours forever — even if you stop paying, the stories you
 </section>
 
 <section class="max-w-5xl mx-auto px-6 py-24 text-center">
-<div class="rounded-[3rem] bg-[linear-gradient(135deg,#fff7ed_0%,#fff0f4_42%,#eaf3ff_100%)] px-6 py-14 sm:px-10 shadow-card border border-white/70">
+<div class="rounded-[3rem] bg-[linear-gradient(135deg,#ffffff_0%,#f7fbff_55%,#eef7ff_100%)] px-6 py-14 sm:px-10 shadow-card border border-[#dcecff]/80">
 <p class="inline-flex items-center gap-2 rounded-full bg-white/90 px-4 py-2 text-sm font-semibold text-primary shadow-sm">
 <span class="material-symbols-outlined text-base" data-icon="bedtime">bedtime</span>
 Bedtime can feel magical again
@@ -674,7 +718,7 @@ Bedtime can feel magical again
 
 </main>
 
-<footer class="w-full rounded-t-[3rem] mt-10 bg-[#f9ecdc]">
+<footer class="w-full rounded-t-[3rem] mt-10 bg-[#f7fbff] border-t border-[#dcecff]/80">
 <div class="max-w-7xl mx-auto px-8 py-16">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
 <div class="space-y-6">
@@ -706,7 +750,7 @@ Bedtime can feel magical again
 </ul>
 </div>
 </div>
-<div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-[#dccab6]/70 gap-8">
+<div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-[#dcecff]/80 gap-8">
 <p class="text-sm text-on-surface-variant">&copy; 2026 Kippo. All rights reserved.</p>
 </div>
 </div>
