@@ -6,7 +6,7 @@
 <title>Kippo | Personalized Audio Stories for Your Child</title>
 <meta name="description" content="Kippo creates personalized audio stories starring your child — with professional narration and original music. Try it free.">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script>
       tailwind.config = {
@@ -17,75 +17,99 @@
               "on-secondary-fixed-variant": "#1e3a8a",
               "secondary-container": "#dbeafe",
               "on-secondary": "#eff6ff",
-              "on-surface": "#34322c",
+              "on-surface": "#2f2b2f",
               "secondary-fixed": "#dbeafe",
               "on-primary-container": "#1e3a8a",
               "tertiary": "#1d4ed8",
-              "primary-dim": "#1e40af",
+              "primary-dim": "#1d4ed8",
               "error-dim": "#770326",
-              "background": "#fef9f3",
+              "background": "#fff7ef",
               "on-primary-fixed-variant": "#1e3a8a",
-              "on-primary": "#eff6ff",
-              "surface-container-high": "#ede8df",
+              "on-primary": "#f8fbff",
+              "surface-container-high": "#f4e8d8",
               "on-tertiary-container": "#1e3a8a",
-              "surface-container": "#f2ede6",
+              "surface-container": "#fff1df",
               "secondary": "#1e40af",
               "secondary-dim": "#1d4ed8",
               "primary-fixed": "#93c5fd",
               "primary": "#2563eb",
-              "surface": "#fef9f3",
-              "outline": "#7e7a73",
+              "surface": "#fffaf4",
+              "outline": "#8a7d73",
               "tertiary-dim": "#2563eb",
               "surface-container-lowest": "#ffffff",
               "error": "#ac3149",
-              "outline-variant": "#b6b1a9",
+              "outline-variant": "#d9c9b7",
               "on-tertiary-fixed": "#1e3a8a",
-              "surface-dim": "#dfd9cf",
-              "on-background": "#34322c",
-              "surface-container-low": "#f8f3ec",
+              "surface-dim": "#eadcc8",
+              "on-background": "#2f2b2f",
+              "surface-container-low": "#fff6ea",
               "on-secondary-fixed": "#1e3a8a",
               "inverse-primary": "#3b82f6",
-              "surface-variant": "#e7e2d9",
+              "surface-variant": "#f4e9da",
               "error-container": "#f76a80",
               "primary-container": "#dbeafe",
               "primary-fixed-dim": "#60a5fa",
               "on-tertiary": "#eff6ff",
               "on-error": "#fff7f7",
-              "inverse-on-surface": "#a09c97",
+              "inverse-on-surface": "#b1a499",
               "tertiary-container": "#bfdbfe",
-              "surface-container-highest": "#e7e2d9",
+              "surface-container-highest": "#f1e2cd",
               "on-tertiary-fixed-variant": "#1d4ed8",
               "tertiary-fixed": "#bfdbfe",
               "on-secondary-container": "#1e3a8a",
-              "surface-bright": "#fef9f3",
+              "surface-bright": "#fffaf4",
               "inverse-surface": "#0f0e0b",
-              "on-surface-variant": "#625f58",
+              "on-surface-variant": "#685e57",
               "tertiary-fixed-dim": "#93c5fd",
               "on-primary-fixed": "#1e3a8a",
               "on-error-container": "#68001f",
               "secondary-fixed-dim": "#93c5fd",
-              "surface-tint": "#2563eb"
+              "surface-tint": "#2563eb",
+              "sun": "#ffb84d",
+              "sun-soft": "#ffe0a8",
+              "peach": "#ff8e6e",
+              "peach-soft": "#ffd7cd",
+              "mint": "#7fd7c1",
+              "mint-soft": "#daf7ef",
+              "berry": "#ff5f8f",
+              "berry-soft": "#ffd2e0",
+              "sky-soft": "#eaf3ff"
             },
             fontFamily: {
               "headline": ["Plus Jakarta Sans"],
               "body": ["Manrope"],
               "label": ["Manrope"]
             },
-            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+            boxShadow: {
+              "play": "0 24px 80px rgba(37, 99, 235, 0.16)",
+              "float": "0 16px 40px rgba(255, 142, 110, 0.18)",
+              "card": "0 18px 48px rgba(71, 53, 41, 0.08)"
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "2xl": "2.5rem", "full": "9999px"},
           },
         },
       }
     </script>
 <style>
+        :root {
+            color-scheme: light;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background:
+                radial-gradient(circle at top left, rgba(255, 184, 77, 0.22), transparent 28%),
+                radial-gradient(circle at 85% 12%, rgba(127, 215, 193, 0.18), transparent 24%),
+                linear-gradient(180deg, #fffaf4 0%, #fff6ee 45%, #fffaf4 100%);
+        }
         .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
         }
         .glass-nav {
-            background: rgba(254, 249, 243, 0.7);
-            backdrop-filter: blur(20px);
-        }
-        .story-gradient {
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            background: rgba(255, 250, 244, 0.72);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(217, 201, 183, 0.35);
         }
         .brand-logo-mask {
             position: relative;
@@ -102,6 +126,126 @@
             height: 144px;
             max-width: none;
         }
+        .hero-orb {
+            position: absolute;
+            border-radius: 9999px;
+            filter: blur(3px);
+            opacity: 0.85;
+        }
+        .hero-sparkle {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background: #ffb84d;
+            clip-path: polygon(50% 0%, 63% 37%, 100% 50%, 63% 63%, 50% 100%, 37% 63%, 0% 50%, 37% 37%);
+        }
+        .section-shell {
+            position: relative;
+            overflow: hidden;
+        }
+        .section-shell::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.5;
+        }
+        .wave-top::before {
+            background:
+                radial-gradient(circle at 12% -8%, rgba(255, 184, 77, 0.2), transparent 24%),
+                radial-gradient(circle at 90% 0%, rgba(127, 215, 193, 0.18), transparent 20%);
+        }
+        .patchwork::before {
+            background:
+                radial-gradient(circle at 8% 15%, rgba(255, 95, 143, 0.13), transparent 20%),
+                radial-gradient(circle at 88% 80%, rgba(37, 99, 235, 0.13), transparent 22%);
+        }
+        .night-sky::before {
+            background:
+                radial-gradient(circle at 10% 18%, rgba(255, 184, 77, 0.18), transparent 15%),
+                radial-gradient(circle at 82% 10%, rgba(255, 255, 255, 0.14), transparent 12%),
+                radial-gradient(circle at 72% 78%, rgba(127, 215, 193, 0.18), transparent 16%);
+        }
+        .speech-card {
+            position: relative;
+        }
+        .speech-card::after {
+            content: "";
+            position: absolute;
+            bottom: -14px;
+            left: 34px;
+            width: 28px;
+            height: 28px;
+            background: inherit;
+            border-right: 1px solid rgba(217, 201, 183, 0.3);
+            border-bottom: 1px solid rgba(217, 201, 183, 0.3);
+            transform: rotate(45deg);
+            border-bottom-right-radius: 12px;
+        }
+        .story-icon {
+            width: 88px;
+            height: 88px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: #1e40af;
+            position: relative;
+            isolation: isolate;
+            box-shadow: 0 14px 30px rgba(37, 99, 235, 0.12);
+        }
+        .story-icon::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+        }
+        .story-icon-star::before {
+            background: #ffe0a8;
+            clip-path: polygon(50% 0%, 61% 21%, 84% 10%, 76% 33%, 100% 50%, 76% 67%, 84% 90%, 61% 79%, 50% 100%, 39% 79%, 16% 90%, 24% 67%, 0% 50%, 24% 33%, 16% 10%, 39% 21%);
+        }
+        .story-icon-cloud::before {
+            background:
+                radial-gradient(circle at 30% 55%, #daf7ef 22%, transparent 23%),
+                radial-gradient(circle at 54% 42%, #daf7ef 25%, transparent 26%),
+                radial-gradient(circle at 75% 58%, #daf7ef 20%, transparent 21%),
+                linear-gradient(#daf7ef, #daf7ef);
+            background-repeat: no-repeat;
+            background-position: 14px 34px, 32px 18px, 54px 36px, 18px 44px;
+            background-size: 28px 28px, 34px 34px, 24px 24px, 52px 18px;
+            border-radius: 32px;
+        }
+        .story-icon-splash::before {
+            background: #ffd7cd;
+            border-radius: 28px;
+            transform: rotate(-12deg);
+        }
+        .feature-icon {
+            width: 76px;
+            height: 76px;
+            border-radius: 24px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+        }
+        .pricing-card {
+            backdrop-filter: blur(10px);
+        }
+        .cloud-card {
+            position: relative;
+            overflow: hidden;
+        }
+        .cloud-card::before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 96px;
+            height: 96px;
+            background: rgba(255, 184, 77, 0.12);
+            border-radius: 9999px;
+        }
         @media (min-width: 640px) {
             .brand-logo-mask {
                 width: 61px;
@@ -114,14 +258,10 @@
                 height: 160px;
             }
         }
-        html {
-            scroll-behavior: smooth;
-        }
     </style>
 </head>
 <body id="top" class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
 
-<!-- TopAppBar -->
 <nav class="fixed top-0 w-full z-50 glass-nav">
 <div class="flex justify-between items-center px-6 py-[14px] max-w-7xl mx-auto gap-4">
 <a class="flex items-center gap-3 shrink-0" href="#top" aria-label="Kippo home">
@@ -131,16 +271,16 @@
 <span class="text-2xl font-extrabold text-primary font-headline tracking-tight leading-none">Kippo</span>
 </a>
 <div class="hidden md:flex items-center gap-8">
-<a class="text-[#625f58] transition-opacity duration-300 hover:opacity-80" href="#how-it-works">How It Works</a>
-<a class="text-[#625f58] transition-opacity duration-300 hover:opacity-80" href="#features">Features</a>
-<a class="text-[#625f58] transition-opacity duration-300 hover:opacity-80" href="#pricing">Pricing</a>
-<a class="text-[#625f58] transition-opacity duration-300 hover:opacity-80" href="#faq">FAQ</a>
+<a class="text-on-surface-variant transition-colors duration-300 hover:text-primary" href="#how-it-works">How It Works</a>
+<a class="text-on-surface-variant transition-colors duration-300 hover:text-primary" href="#features">Features</a>
+<a class="text-on-surface-variant transition-colors duration-300 hover:text-primary" href="#pricing">Pricing</a>
+<a class="text-on-surface-variant transition-colors duration-300 hover:text-primary" href="#faq">FAQ</a>
 </div>
 <div class="flex items-center gap-3 sm:gap-4 shrink-0">
 <a href="https://app.getkippo.com/login" class="text-sm sm:text-base font-semibold text-primary underline underline-offset-4 decoration-primary/30 hover:decoration-primary transition-colors duration-300 whitespace-nowrap">
     Log in
 </a>
-<a href="https://app.getkippo.com/login?mode=signup" class="bg-primary text-on-primary px-5 sm:px-8 py-3 rounded-lg font-semibold hover:opacity-90 active:scale-95 transition-all duration-300 shadow-sm inline-block whitespace-nowrap text-sm sm:text-base">
+<a href="https://app.getkippo.com/login?mode=signup" class="bg-primary text-on-primary px-5 sm:px-8 py-3 rounded-full font-semibold hover:-translate-y-0.5 active:scale-95 transition-all duration-300 shadow-sm inline-block whitespace-nowrap text-sm sm:text-base">
     Get Started Free
 </a>
 </div>
@@ -149,57 +289,87 @@
 
 <main class="pt-24">
 
-<!-- Hero Section -->
-<section class="max-w-7xl mx-auto px-6 py-20 md:py-32 grid md:grid-cols-2 gap-16 items-center">
+<section class="max-w-7xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)] gap-14 items-center">
 <div class="space-y-8">
-<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary-container text-on-secondary-container font-medium text-sm">
-<span class="material-symbols-outlined text-sm" data-icon="auto_awesome">auto_awesome</span>
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-white text-on-secondary-container font-semibold text-sm shadow-sm">
+<span class="material-symbols-outlined text-base text-primary" data-icon="auto_awesome">auto_awesome</span>
     AI-Powered Bedtime Magic
 </div>
-<h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.1] text-on-surface">
+<div class="space-y-5">
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.02] text-on-surface">
     Turn Your Child Into the <span class="text-primary">Hero</span> of Their Own Story
 </h1>
-<p class="text-xl text-on-surface-variant max-w-lg leading-relaxed">
+<p class="text-xl text-on-surface-variant max-w-xl leading-relaxed">
     Use AI to create personalized audio stories starring your kids. Perfect for the car, bedtime, or whenever you want to trade screen time for imagination.
 </p>
-<div class="flex flex-col sm:flex-row gap-4 pt-4">
-<a href="https://app.getkippo.com/login?mode=signup" class="bg-primary text-on-primary px-10 py-5 rounded-lg text-lg font-bold hover:opacity-90 transition-all shadow-lg shadow-primary/10 text-center">
+</div>
+<div class="flex flex-col sm:flex-row gap-4 pt-2">
+<a href="https://app.getkippo.com/login?mode=signup" class="bg-primary text-on-primary px-10 py-5 rounded-full text-lg font-bold hover:-translate-y-0.5 transition-all shadow-play text-center">
     Create a Free Story
 </a>
 </div>
+<div class="grid sm:grid-cols-3 gap-4 max-w-2xl">
+<div class="bg-white/85 rounded-[2rem] px-5 py-4 shadow-card border border-white/60">
+<p class="text-xs font-bold uppercase tracking-[0.24em] text-peach">Story Time</p>
+<p class="mt-2 text-sm text-on-surface-variant">Personal details become part of the adventure.</p>
+</div>
+<div class="bg-[#fff0de] rounded-[2rem] px-5 py-4 shadow-card border border-white/40 sm:translate-y-4">
+<p class="text-xs font-bold uppercase tracking-[0.24em] text-primary">Screen-Free</p>
+<p class="mt-2 text-sm text-on-surface-variant">Made for bedtime, car rides, and quiet moments.</p>
+</div>
+<div class="bg-[#eaf8f3] rounded-[2rem] px-5 py-4 shadow-card border border-white/50">
+<p class="text-xs font-bold uppercase tracking-[0.24em] text-[#128067]">Made to Share</p>
+<p class="mt-2 text-sm text-on-surface-variant">Grandparents can listen instantly from a simple link.</p>
+</div>
+</div>
 </div>
 <div class="relative">
-<div class="absolute -top-12 -left-12 w-64 h-64 bg-primary-container/30 rounded-full blur-3xl"></div>
-<div class="absolute -bottom-12 -right-12 w-64 h-64 bg-secondary-container/30 rounded-full blur-3xl"></div>
-<img alt="A child in a red cape standing on a cliff at sunset" class="relative z-10 w-full aspect-square object-cover rounded-xl shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700" src="Kippo_stories_home_image.jpg"/>
+<div class="absolute inset-0 rounded-[3rem] bg-gradient-to-br from-white via-[#fff4e3] to-[#dcecff] rotate-[-4deg] shadow-play"></div>
+<div class="absolute hero-orb -top-8 right-10 w-20 h-20 bg-sun-soft"></div>
+<div class="absolute hero-orb top-20 -left-4 w-24 h-24 bg-peach-soft"></div>
+<div class="absolute hero-orb -bottom-4 right-16 w-24 h-24 bg-mint-soft"></div>
+<div class="hero-sparkle top-12 right-20"></div>
+<div class="hero-sparkle bottom-24 left-10 bg-peach"></div>
+<div class="relative z-10 p-4 sm:p-6">
+<div class="relative overflow-hidden rounded-[2.5rem] bg-[#eaf3ff] p-4 sm:p-5 shadow-play">
+<img alt="A child in a red cape standing on a cliff at sunset" class="w-full aspect-[0.92] sm:aspect-square object-cover rounded-[2rem] shadow-2xl" src="Kippo_stories_home_image.jpg"/>
+<div class="absolute left-3 top-3 sm:left-5 sm:top-5 rounded-[1.5rem] bg-white/92 px-4 py-3 shadow-card">
+<p class="text-[11px] font-bold uppercase tracking-[0.24em] text-peach">Tonight's Adventure</p>
+<p class="mt-1 text-sm font-semibold text-on-surface">Personalized bedtime magic</p>
+</div>
+<div class="absolute right-3 bottom-3 sm:right-5 sm:bottom-5 rounded-[1.5rem] bg-primary px-4 py-3 text-on-primary shadow-play">
+<p class="text-[11px] font-bold uppercase tracking-[0.24em] text-primary-fixed">Made for ages 3-8</p>
+<p class="mt-1 text-sm font-semibold">Warm narration, original music</p>
+</div>
+</div>
+</div>
 </div>
 </section>
 
-<!-- How It Works -->
-<section id="how-it-works" class="bg-surface-container-low py-24 px-6 rounded-t-[4rem] -mt-10 relative z-20">
-<div class="max-w-7xl mx-auto">
+<section id="how-it-works" class="section-shell wave-top bg-[#fff1dd] py-24 px-6 rounded-[3.5rem] mx-4 sm:mx-6 md:mx-8">
+<div class="max-w-7xl mx-auto relative">
 <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
-<h2 class="font-headline text-4xl font-bold">Magic in Minutes</h2>
+<h2 class="font-headline text-4xl md:text-5xl font-bold">Magic in Minutes</h2>
 <p class="text-on-surface-variant">Every child wants to be the hero. Kippo makes it real — personalized audio adventures where your child stars in a story that's not just fun, but can gently teach the lessons that matter to your family.</p>
 </div>
-<div class="grid md:grid-cols-3 gap-12">
-<div class="flex flex-col items-center text-center p-8 rounded-xl bg-surface transition-transform hover:-translate-y-2 duration-300 shadow-sm">
-<div class="w-16 h-16 rounded-full bg-primary-container flex items-center justify-center text-primary mb-6">
-<span class="material-symbols-outlined text-3xl" data-icon="edit_note">edit_note</span>
+<div class="grid md:grid-cols-3 gap-8 lg:gap-10">
+<div class="flex flex-col items-center text-center p-8 rounded-[2.5rem] bg-white transition-transform hover:-translate-y-2 duration-300 shadow-card border border-white/80 md:rotate-[-2deg]">
+<div class="story-icon story-icon-star mb-6">
+<span class="material-symbols-outlined text-primary text-[42px]" data-icon="edit_note">edit_note</span>
 </div>
 <h3 class="text-xl font-bold mb-3">Tell Us About Your Child</h3>
 <p class="text-on-surface-variant leading-relaxed">Enter their name, age, personality, and interests. Are they brave? Silly? Obsessed with dinosaurs? We'll weave it all in.</p>
 </div>
-<div class="flex flex-col items-center text-center p-8 rounded-xl bg-surface transition-transform hover:-translate-y-2 duration-300 shadow-sm">
-<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center text-secondary mb-6">
-<span class="material-symbols-outlined text-3xl" data-icon="temp_preferences_custom">temp_preferences_custom</span>
+<div class="flex flex-col items-center text-center p-8 rounded-[2.5rem] bg-[#fff8ef] transition-transform hover:-translate-y-2 duration-300 shadow-card border border-[#ffd7cd]/60 md:translate-y-8">
+<div class="story-icon story-icon-cloud mb-6">
+<span class="material-symbols-outlined text-primary text-[42px]" data-icon="temp_preferences_custom">temp_preferences_custom</span>
 </div>
 <h3 class="text-xl font-bold mb-3">Choose Your Story Style</h3>
 <p class="text-on-surface-variant leading-relaxed">Pick the mood and theme — a calming bedtime journey, a thrilling dinosaur adventure, a fantasy quest, or a real-world lesson.</p>
 </div>
-<div class="flex flex-col items-center text-center p-8 rounded-xl bg-surface transition-transform hover:-translate-y-2 duration-300 shadow-sm">
-<div class="w-16 h-16 rounded-full bg-tertiary-container flex items-center justify-center text-tertiary mb-6">
-<span class="material-symbols-outlined text-3xl" data-icon="headphones">headphones</span>
+<div class="flex flex-col items-center text-center p-8 rounded-[2.5rem] bg-[#eef8ff] transition-transform hover:-translate-y-2 duration-300 shadow-card border border-white/80 md:rotate-[2deg]">
+<div class="story-icon story-icon-splash mb-6">
+<span class="material-symbols-outlined text-primary text-[42px]" data-icon="headphones">headphones</span>
 </div>
 <h3 class="text-xl font-bold mb-3">Listen &amp; Share</h3>
 <p class="text-on-surface-variant leading-relaxed">Your story is ready — with narration and music. Save it to your library or share a link with family instantly.</p>
@@ -208,142 +378,164 @@
 </div>
 </section>
 
-<!-- Features Bento Grid -->
-<section id="features" class="py-24 px-6 max-w-7xl mx-auto">
-<div class="mb-16">
-<h2 class="font-headline text-4xl font-bold mb-4">Crafted for Families</h2>
+<section id="features" class="section-shell patchwork py-24 px-6 max-w-7xl mx-auto">
+<div class="mb-16 max-w-2xl">
+<p class="inline-flex items-center gap-2 rounded-full bg-[#ffe8c3] px-4 py-2 text-sm font-semibold text-[#9a5a00] shadow-sm">
+<span class="material-symbols-outlined text-base text-[#c77600]" data-icon="toys">toys</span>
+Designed for delight
+</p>
+<h2 class="font-headline text-4xl md:text-5xl font-bold mt-5 mb-4">Crafted for Families</h2>
 <p class="text-on-surface-variant">Stories that feel handmade, powered by technology that's invisible.</p>
 </div>
-<div class="grid md:grid-cols-3 gap-6">
-<!-- Large Feature -->
-<div class="md:col-span-2 bg-primary rounded-xl p-10 text-on-primary flex flex-col justify-between min-h-[400px] overflow-hidden relative">
+<div class="grid md:grid-cols-3 gap-6 auto-rows-fr">
+<div class="md:col-span-2 rounded-[2.75rem] p-10 sm:p-12 text-on-primary flex flex-col justify-between min-h-[400px] overflow-hidden relative bg-[linear-gradient(135deg,#2563eb_0%,#4f7ff7_40%,#5f7cff_100%)] shadow-play">
+<div class="absolute top-6 right-8 w-28 h-28 rounded-full bg-white/10"></div>
+<div class="absolute bottom-8 left-8 w-16 h-16 rounded-full bg-sun/80"></div>
+<div class="absolute -right-20 -bottom-20 w-72 h-72 bg-white/10 rounded-full"></div>
 <div class="relative z-10 max-w-md">
+<div class="feature-icon bg-white/14 text-white mb-8 rounded-[2rem]">
+<span class="material-symbols-outlined text-[40px]" data-icon="person_celebrate">person_celebrate</span>
+</div>
 <h3 class="text-3xl font-bold mb-4 font-headline">Personalized to Your Child</h3>
-<p class="text-primary-fixed/80 text-lg leading-relaxed">Their name, personality traits, favorite things, and life lessons you want to teach — woven into every story. No two stories are alike.</p>
+<p class="text-primary-fixed/90 text-lg leading-relaxed">Their name, personality traits, favorite things, and life lessons you want to teach — woven into every story. No two stories are alike.</p>
 </div>
-<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-primary-dim rounded-full flex items-center justify-center">
-<span class="material-symbols-outlined text-[120px] opacity-20" data-icon="person_celebrate">person_celebrate</span>
+<div class="relative z-10 mt-10 flex flex-wrap gap-3 text-sm font-semibold">
+<span class="rounded-full bg-white/16 px-4 py-2">Names</span>
+<span class="rounded-full bg-white/16 px-4 py-2">Interests</span>
+<span class="rounded-full bg-white/16 px-4 py-2">Family values</span>
 </div>
 </div>
-<!-- Immersive Audio -->
-<div class="bg-surface-container-high rounded-xl p-10 flex flex-col justify-between min-h-[220px]">
-<span class="material-symbols-outlined text-tertiary text-4xl" data-icon="surround_sound">surround_sound</span>
+<div class="bg-[#fff2df] rounded-[2.5rem] p-8 flex flex-col justify-between min-h-[220px] shadow-card border border-[#ffd7cd]/45">
+<div class="feature-icon bg-[#ffd7cd] text-primary">
+<span class="material-symbols-outlined text-[36px]" data-icon="surround_sound">surround_sound</span>
+</div>
 <div>
 <h3 class="text-2xl font-bold mb-2">Immersive Audio</h3>
 <p class="text-on-surface-variant">Professional narration and original music that bring every scene to life.</p>
 </div>
 </div>
-<!-- Family Sharing -->
-<div class="bg-secondary-container rounded-xl p-10 flex flex-col justify-between min-h-[220px]">
-<span class="material-symbols-outlined text-secondary text-4xl" data-icon="family_history">family_history</span>
+<div class="bg-[#e7f8f2] rounded-[2.5rem] p-8 flex flex-col justify-between min-h-[220px] shadow-card border border-[#bde9da]/55 md:translate-y-6">
+<div class="feature-icon bg-white text-[#128067]">
+<span class="material-symbols-outlined text-[36px]" data-icon="family_history">family_history</span>
+</div>
 <div>
 <h3 class="text-2xl font-bold mb-2">Share with Family</h3>
 <p class="text-on-surface-variant">Send a link to grandparents, aunts, and uncles. They can listen instantly — no account needed.</p>
 </div>
 </div>
-<!-- Story Library -->
-<div class="bg-surface-container rounded-xl p-10 flex flex-col justify-between min-h-[220px]">
-<span class="material-symbols-outlined text-primary text-4xl" data-icon="library_books">library_books</span>
+<div class="bg-white rounded-[2.5rem] p-8 flex flex-col justify-between min-h-[220px] shadow-card border border-[#d9c9b7]/35">
+<div class="feature-icon bg-[#eaf3ff] text-primary">
+<span class="material-symbols-outlined text-[36px]" data-icon="library_books">library_books</span>
+</div>
 <div>
 <h3 class="text-2xl font-bold mb-2">Your Story Library</h3>
 <p class="text-on-surface-variant">Every story is saved. Replay favorites anytime and build a collection over time.</p>
 </div>
 </div>
-<!-- Screen-free -->
-<div class="bg-tertiary rounded-xl p-10 text-on-tertiary flex flex-col justify-between min-h-[220px]">
-<span class="material-symbols-outlined text-4xl" data-icon="phonelink_off">phonelink_off</span>
+<div class="bg-[linear-gradient(135deg,#ff8e6e_0%,#ffb84d_100%)] rounded-[2.5rem] p-8 text-white flex flex-col justify-between min-h-[220px] shadow-float">
+<div class="feature-icon bg-white/18 text-white">
+<span class="material-symbols-outlined text-[36px]" data-icon="phonelink_off">phonelink_off</span>
+</div>
 <div>
 <h3 class="text-2xl font-bold mb-2">Screen-Free Entertainment</h3>
-<p class="text-tertiary-fixed/70">Designed for listening, not staring. Stories that spark imagination without blue-light stimulation.</p>
+<p class="text-white/85">Designed for listening, not staring. Stories that spark imagination without blue-light stimulation.</p>
 </div>
 </div>
 </div>
 </section>
 
-<!-- Trust & Safety -->
-<section class="max-w-7xl mx-auto px-6 pb-16">
-<div class="flex flex-wrap justify-center gap-8 md:gap-16 py-8 px-6 rounded-xl bg-surface-container-low">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<section class="max-w-7xl mx-auto px-6 pb-10">
+<div class="rounded-[2.75rem] bg-[linear-gradient(135deg,#ffffff_0%,#fff7ed_46%,#edf6ff_100%)] p-6 sm:p-8 shadow-card border border-white/70">
+<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="flex items-center gap-4 rounded-[2rem] bg-white/90 p-4 border border-[#e9dccd]/55">
+<div class="feature-icon w-14 h-14 rounded-[1.25rem] bg-[#eaf3ff] text-primary text-2xl">
+<span class="material-symbols-outlined" style="font-size: 28px;" data-icon="verified_user">verified_user</span>
+</div>
 <div>
 <p class="font-bold text-sm">COPPA Compliant</p>
 <p class="text-xs text-on-surface-variant">Child privacy protected</p>
 </div>
 </div>
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">lock</span>
+<div class="flex items-center gap-4 rounded-[2rem] bg-[#fff7ef] p-4 border border-[#ffe0a8]/65">
+<div class="feature-icon w-14 h-14 rounded-[1.25rem] bg-[#ffe8c3] text-[#9a5a00] text-2xl">
+<span class="material-symbols-outlined" style="font-size: 28px;" data-icon="lock">lock</span>
+</div>
 <div>
 <p class="font-bold text-sm">Encrypted Data</p>
 <p class="text-xs text-on-surface-variant">Your family's data is secure</p>
 </div>
 </div>
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">block</span>
+<div class="flex items-center gap-4 rounded-[2rem] bg-[#fff0f4] p-4 border border-[#ffd2e0]/70">
+<div class="feature-icon w-14 h-14 rounded-[1.25rem] bg-[#ffd2e0] text-[#d23564] text-2xl">
+<span class="material-symbols-outlined" style="font-size: 28px;" data-icon="block">block</span>
+</div>
 <div>
 <p class="font-bold text-sm">No Ads. Ever.</p>
 <p class="text-xs text-on-surface-variant">No tracking, no third-party ads</p>
 </div>
 </div>
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">shield</span>
+<div class="flex items-center gap-4 rounded-[2rem] bg-[#ecfbf6] p-4 border border-[#c5efdf]/70">
+<div class="feature-icon w-14 h-14 rounded-[1.25rem] bg-[#daf7ef] text-[#128067] text-2xl">
+<span class="material-symbols-outlined" style="font-size: 28px;" data-icon="shield">shield</span>
+</div>
 <div>
 <p class="font-bold text-sm">Content Safety</p>
 <p class="text-xs text-on-surface-variant">Age-appropriate, always</p>
 </div>
 </div>
 </div>
+</div>
 </section>
 
-<!-- Social Proof -->
-<section class="bg-surface-container-low py-24 px-6 rounded-[3rem]">
+<section class="section-shell bg-[#fff6ea] py-24 px-6 rounded-[3.25rem] mx-4 sm:mx-6 md:mx-8">
 <div class="max-w-7xl mx-auto">
-<h2 class="font-headline text-4xl font-bold text-center mb-16">What Parents Are Saying</h2>
-<div class="grid md:grid-cols-3 gap-8">
-<div class="bg-surface p-8 rounded-xl shadow-sm border border-outline-variant/10">
-<div class="flex text-primary mb-4">
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<h2 class="font-headline text-4xl md:text-5xl font-bold text-center mb-16">What Parents Are Saying</h2>
+<div class="grid md:grid-cols-3 gap-10">
+<div class="speech-card bg-white p-8 rounded-[2.5rem] shadow-card border border-[#eadcc8]/60">
+<div class="flex text-[#ffb84d] mb-5 gap-1">
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span class="material-symbols-outlined" data-icon="star">star</span>
 </div>
-<p class="italic text-on-surface-variant mb-6 leading-relaxed">"My son asks for his Kippo story every single night. He loves hearing his own name in the adventure. It's become our favorite bedtime ritual."</p>
+<p class="italic text-on-surface-variant mb-8 leading-relaxed">"My son asks for his Kippo story every single night. He loves hearing his own name in the adventure. It's become our favorite bedtime ritual."</p>
 <div class="flex items-center gap-4">
-<div class="w-10 h-10 rounded-full bg-primary-container"></div>
+<div class="w-12 h-12 rounded-[1.25rem] bg-[#ffe8c3]"></div>
 <div>
 <p class="font-bold">Sarah M.</p>
 <p class="text-xs text-outline">Parent of a 5-year-old</p>
 </div>
 </div>
 </div>
-<div class="bg-surface p-8 rounded-xl shadow-sm border border-outline-variant/10">
-<div class="flex text-primary mb-4">
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<div class="speech-card bg-[#eef7ff] p-8 rounded-[2.5rem] shadow-card border border-[#cfe2ff]/60 md:translate-y-8">
+<div class="flex text-[#ffb84d] mb-5 gap-1">
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span class="material-symbols-outlined" data-icon="star">star</span>
 </div>
-<p class="italic text-on-surface-variant mb-6 leading-relaxed">"I sent a story link to my parents across the country. They were in tears hearing a story about their grandkids. No app download, no account — just clicked and listened."</p>
+<p class="italic text-on-surface-variant mb-8 leading-relaxed">"I sent a story link to my parents across the country. They were in tears hearing a story about their grandkids. No app download, no account — just clicked and listened."</p>
 <div class="flex items-center gap-4">
-<div class="w-10 h-10 rounded-full bg-primary-container"></div>
+<div class="w-12 h-12 rounded-[1.25rem] bg-white"></div>
 <div>
 <p class="font-bold">David L.</p>
 <p class="text-xs text-outline">Parent of two</p>
 </div>
 </div>
 </div>
-<div class="bg-surface p-8 rounded-xl shadow-sm border border-outline-variant/10">
-<div class="flex text-primary mb-4">
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<div class="speech-card bg-[#fff0f4] p-8 rounded-[2.5rem] shadow-card border border-[#ffd2e0]/60">
+<div class="flex text-[#ffb84d] mb-5 gap-1">
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span class="material-symbols-outlined" data-icon="star">star</span>
+<span class="material-symbols-outlined" data-icon="star">star</span>
 </div>
-<p class="italic text-on-surface-variant mb-6 leading-relaxed">"I watched my daughter take care of her baby sister today--stopping her before she climbed too far up the stairs--the exact same way she heard it in Kippo."</p>
+<p class="italic text-on-surface-variant mb-8 leading-relaxed">"I watched my daughter take care of her baby sister today--stopping her before she climbed too far up the stairs--the exact same way she heard it in Kippo."</p>
 <div class="flex items-center gap-4">
-<div class="w-10 h-10 rounded-full bg-primary-container"></div>
+<div class="w-12 h-12 rounded-[1.25rem] bg-white/90"></div>
 <div>
 <p class="font-bold">Jessica R.</p>
 <p class="text-xs text-outline">Parent of a 7-year-old</p>
@@ -354,20 +546,22 @@
 </div>
 </section>
 
-<!-- Pricing Section -->
-<section id="pricing" class="py-32 px-6 max-w-7xl mx-auto">
-<div class="text-center mb-20">
-<h2 class="font-headline text-4xl font-bold mb-4">Simple, Honest Pricing</h2>
-<p class="text-on-surface-variant">Start free. Upgrade when your family wants more stories.</p>
-<p class="mt-2 text-sm text-on-surface-variant/80">Need a few more some months? Buy extra stories anytime — $2.99 each, and they never expire.</p>
-<p class="mt-4 inline-flex items-center gap-2 rounded-full bg-[#eff6ff] px-4 py-2 text-sm font-medium text-[#1e40af]">
+<section id="pricing" class="section-shell night-sky py-28 px-6 max-w-7xl mx-auto">
+<div class="rounded-[3rem] bg-[linear-gradient(135deg,#173b98_0%,#2555d8_48%,#2b68f3_100%)] px-6 py-16 sm:px-10 md:px-12 text-white shadow-play overflow-hidden relative">
+<div class="absolute top-10 left-10 w-3 h-3 rounded-full bg-white/80"></div>
+<div class="absolute top-20 right-20 w-2 h-2 rounded-full bg-[#ffe0a8]"></div>
+<div class="absolute bottom-16 left-1/3 w-4 h-4 rounded-full bg-[#daf7ef]/80"></div>
+<div class="text-center mb-16 relative z-10">
+<h2 class="font-headline text-4xl md:text-5xl font-bold mb-4">Simple, Honest Pricing</h2>
+<p class="text-blue-100">Start free. Upgrade when your family wants more stories.</p>
+<p class="mt-2 text-sm text-blue-100/85">Need a few more some months? Buy extra stories anytime — $2.99 each, and they never expire.</p>
+<p class="mt-4 inline-flex items-center gap-2 rounded-full bg-white/14 px-4 py-2 text-sm font-medium text-white border border-white/15">
 <span class="material-symbols-outlined text-base" data-icon="verified">verified</span>
 Your story library is yours forever — even if you stop paying, the stories you created stay with you.
 </p>
 </div>
-<div class="grid md:grid-cols-4 gap-6 items-start">
-<!-- Free -->
-<div class="bg-surface p-8 rounded-xl border border-outline-variant/20 flex flex-col h-full transition-transform hover:scale-[1.02]">
+<div class="grid md:grid-cols-4 gap-6 items-start relative z-10">
+<div class="pricing-card bg-white/96 text-on-surface p-8 rounded-[2.25rem] border border-white/70 flex flex-col h-full transition-transform hover:scale-[1.02] shadow-card">
 <h3 class="text-xl font-bold mb-2">Free</h3>
 <div class="flex items-baseline gap-1 mb-6">
 <span class="text-4xl font-bold font-headline">$0</span>
@@ -379,10 +573,9 @@ Your story library is yours forever — even if you stop paying, the stories you
 <li class="flex items-start gap-2 text-outline-variant"><span class="material-symbols-outlined text-lg" data-icon="cancel">cancel</span> Listen in-app only</li>
 <li class="flex items-start gap-2 text-outline-variant"><span class="material-symbols-outlined text-lg" data-icon="cancel">cancel</span> No voice cloning</li>
 </ul>
-<a href="https://app.getkippo.com/login?mode=signup" class="w-full py-4 rounded-lg bg-surface-container-highest font-bold text-primary hover:bg-primary-container transition-colors text-center block">Start Free</a>
+<a href="https://app.getkippo.com/login?mode=signup" class="w-full py-4 rounded-full bg-[#eaf3ff] font-bold text-primary hover:bg-primary-container transition-colors text-center block">Start Free</a>
 </div>
-<!-- Storyteller -->
-<div class="bg-surface p-8 rounded-xl border border-outline-variant/20 flex flex-col h-full transition-transform hover:scale-[1.02]">
+<div class="pricing-card bg-[#fff8ef] text-on-surface p-8 rounded-[2.25rem] border border-[#ffe0a8]/60 flex flex-col h-full transition-transform hover:scale-[1.02] shadow-card md:translate-y-6">
 <h3 class="text-xl font-bold mb-2">Storyteller</h3>
 <div class="flex items-baseline gap-1 mb-6">
 <span class="text-4xl font-bold font-headline">$7.99</span>
@@ -393,25 +586,23 @@ Your story library is yours forever — even if you stop paying, the stories you
 <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span> Listen in-app</li>
 <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span> Share with family</li>
 </ul>
-<a href="https://app.getkippo.com/login?mode=signup&plan=storyteller" class="w-full py-4 rounded-lg bg-surface-container-highest font-bold text-primary hover:bg-primary-container transition-colors text-center block">Get Started</a>
+<a href="https://app.getkippo.com/login?mode=signup&plan=storyteller" class="w-full py-4 rounded-full bg-white font-bold text-primary hover:bg-primary-container transition-colors text-center block">Get Started</a>
 </div>
-<!-- Storyteller+ (Featured) -->
-<div class="bg-surface rounded-xl border-4 border-primary p-8 flex flex-col h-full relative shadow-2xl md:scale-105 z-10">
-<div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-primary text-on-primary px-4 py-1 rounded-full text-sm font-bold whitespace-nowrap">MOST POPULAR</div>
-<h3 class="text-xl font-bold mb-2">Storyteller+</h3>
-<div class="flex items-baseline gap-1 mb-6">
+<div class="pricing-card bg-white rounded-[2.5rem] border-4 border-sun p-8 flex flex-col h-full relative shadow-[0_24px_70px_rgba(255,184,77,0.28)] md:scale-[1.03] z-10">
+<div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-sun text-[#6b4300] px-4 py-1 rounded-full text-sm font-bold whitespace-nowrap shadow-sm">MOST POPULAR</div>
+<h3 class="text-xl font-bold mb-2 text-on-surface">Storyteller+</h3>
+<div class="flex items-baseline gap-1 mb-6 text-on-surface">
 <span class="text-4xl font-bold font-headline">$14.99</span>
 <span class="text-on-surface-variant">/mo</span>
 </div>
-<ul class="space-y-4 mb-10 flex-grow text-sm">
+<ul class="space-y-4 mb-10 flex-grow text-sm text-on-surface">
 <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span> 8 stories per month</li>
 <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span> Everything in Storyteller</li>
 <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span> 1 cloned voice</li>
 </ul>
-<a href="https://app.getkippo.com/login?mode=signup&plan=storyteller_plus" class="w-full py-4 rounded-lg bg-primary font-bold text-on-primary hover:opacity-90 shadow-lg shadow-primary/20 transition-all text-center block">Get Started</a>
+<a href="https://app.getkippo.com/login?mode=signup&plan=storyteller_plus" class="w-full py-4 rounded-full bg-primary font-bold text-on-primary hover:opacity-90 shadow-lg shadow-primary/20 transition-all text-center block">Get Started</a>
 </div>
-<!-- Family -->
-<div class="bg-surface p-8 rounded-xl border border-outline-variant/20 flex flex-col h-full transition-transform hover:scale-[1.02]">
+<div class="pricing-card bg-[#eef8ff] text-on-surface p-8 rounded-[2.25rem] border border-[#cfe2ff]/65 flex flex-col h-full transition-transform hover:scale-[1.02] shadow-card">
 <h3 class="text-xl font-bold mb-2">Family</h3>
 <div class="flex items-baseline gap-1 mb-6">
 <span class="text-4xl font-bold font-headline">$24.99</span>
@@ -422,44 +613,44 @@ Your story library is yours forever — even if you stop paying, the stories you
 <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span> Everything in Storyteller+</li>
 <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span> 5 cloned voices</li>
 </ul>
-<a href="https://app.getkippo.com/login?mode=signup&plan=family" class="w-full py-4 rounded-lg bg-surface-container-highest font-bold text-primary hover:bg-primary-container transition-colors text-center block">Get Started</a>
+<a href="https://app.getkippo.com/login?mode=signup&plan=family" class="w-full py-4 rounded-full bg-white font-bold text-primary hover:bg-primary-container transition-colors text-center block">Get Started</a>
+</div>
 </div>
 </div>
 </section>
 
-<!-- FAQ -->
-<section id="faq" class="py-24 px-6 bg-surface-container-low rounded-[3rem]">
+<section id="faq" class="py-24 px-6 bg-[#fff0df] rounded-[3.25rem] mx-4 sm:mx-6 md:mx-8">
 <div class="max-w-5xl mx-auto">
 <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
-<h2 class="font-headline text-4xl font-bold">Questions Parents Ask</h2>
+<h2 class="font-headline text-4xl md:text-5xl font-bold">Questions Parents Ask</h2>
 <p class="text-on-surface-variant">Short answers on how Kippo works, what families get, and how we handle privacy.</p>
 </div>
 <div class="grid md:grid-cols-2 gap-6">
-<div class="bg-surface rounded-xl p-8 shadow-sm border border-outline-variant/10">
+<div class="cloud-card bg-white rounded-[2.25rem] p-8 shadow-card border border-white/75">
 <h3 class="text-xl font-bold mb-3">What is Kippo?</h3>
 <p class="text-on-surface-variant leading-relaxed">Kippo creates personalized audio stories starring your child. Each story is made for listening, with warm narration, original music, and details pulled from your child’s world.</p>
 </div>
-<div class="bg-surface rounded-xl p-8 shadow-sm border border-outline-variant/10">
+<div class="cloud-card bg-[#eef8ff] rounded-[2.25rem] p-8 shadow-card border border-[#d9e8ff]/80">
 <h3 class="text-xl font-bold mb-3">How does personalization work?</h3>
 <p class="text-on-surface-variant leading-relaxed">You share a few simple details like your child’s name, age, interests, and personality. Kippo uses that to shape stories that feel familiar, encouraging, and made just for them.</p>
 </div>
-<div class="bg-surface rounded-xl p-8 shadow-sm border border-outline-variant/10">
+<div class="cloud-card bg-[#fff6ea] rounded-[2.25rem] p-8 shadow-card border border-[#ffe0a8]/70">
 <h3 class="text-xl font-bold mb-3">How does voice cloning work?</h3>
 <p class="text-on-surface-variant leading-relaxed">On eligible plans, you can record your own voice so stories sound even more personal. It’s optional, parent-controlled, and only available on plans that include cloned voices.</p>
 </div>
-<div class="bg-surface rounded-xl p-8 shadow-sm border border-outline-variant/10">
+<div class="cloud-card bg-[#eef9f5] rounded-[2.25rem] p-8 shadow-card border border-[#c8ede1]/75">
 <h3 class="text-xl font-bold mb-3">How many stories come with each plan?</h3>
 <p class="text-on-surface-variant leading-relaxed">Free includes 1 story each month. Storyteller includes 3, Storyteller+ includes 8 and 1 cloned voice, and Family includes 20 stories plus 5 cloned voices.</p>
 </div>
-<div class="bg-surface rounded-xl p-8 shadow-sm border border-outline-variant/10">
+<div class="cloud-card bg-white rounded-[2.25rem] p-8 shadow-card border border-white/75">
 <h3 class="text-xl font-bold mb-3">What if I run out of stories?</h3>
 <p class="text-on-surface-variant leading-relaxed">No problem — you can buy extra stories anytime for $2.99 each. They're added to your account instantly, never expire, and are only used after your monthly stories are gone.</p>
 </div>
-<div class="bg-surface rounded-xl p-8 shadow-sm border border-outline-variant/10">
+<div class="cloud-card bg-[#fff0f4] rounded-[2.25rem] p-8 shadow-card border border-[#ffd2e0]/75">
 <h3 class="text-xl font-bold mb-3">Can I cancel anytime?</h3>
 <p class="text-on-surface-variant leading-relaxed">Yes. You can cancel whenever you want, and there's no long-term commitment. Your existing stories stay in your library and are accessible even after a paid plan ends.</p>
 </div>
-<div class="bg-surface rounded-xl p-8 shadow-sm border border-outline-variant/10">
+<div class="cloud-card bg-[#eef8ff] rounded-[2.25rem] p-8 shadow-card border border-[#d9e8ff]/80 md:col-span-2">
 <h3 class="text-xl font-bold mb-3">How does Kippo protect kids’ privacy?</h3>
 <p class="text-on-surface-variant leading-relaxed">Kippo is built for families with child privacy in mind. We keep data handling tight, avoid ads and third-party tracking, and design the product to support COPPA-conscious use.</p>
 </div>
@@ -467,30 +658,34 @@ Your story library is yours forever — even if you stop paying, the stories you
 </div>
 </section>
 
-<!-- Final CTA -->
-<section class="max-w-4xl mx-auto px-6 py-24 text-center">
-<h2 class="font-headline text-4xl md:text-5xl font-bold mb-6">Every child deserves a story made just for them.</h2>
+<section class="max-w-5xl mx-auto px-6 py-24 text-center">
+<div class="rounded-[3rem] bg-[linear-gradient(135deg,#fff7ed_0%,#fff0f4_42%,#eaf3ff_100%)] px-6 py-14 sm:px-10 shadow-card border border-white/70">
+<p class="inline-flex items-center gap-2 rounded-full bg-white/90 px-4 py-2 text-sm font-semibold text-primary shadow-sm">
+<span class="material-symbols-outlined text-base" data-icon="bedtime">bedtime</span>
+Bedtime can feel magical again
+</p>
+<h2 class="font-headline text-4xl md:text-5xl font-bold mt-6 mb-6">Every child deserves a story made just for them.</h2>
 <p class="text-xl text-on-surface-variant mb-10 max-w-2xl mx-auto">Create your first story free — no credit card required. Your child will be the hero before bedtime tonight.</p>
-<a href="https://app.getkippo.com/login?mode=signup" class="bg-primary text-on-primary px-12 py-5 rounded-lg text-lg font-bold hover:opacity-90 transition-all shadow-lg shadow-primary/10 inline-block">
+<a href="https://app.getkippo.com/login?mode=signup" class="bg-primary text-on-primary px-12 py-5 rounded-full text-lg font-bold hover:-translate-y-0.5 transition-all shadow-play inline-block">
     Create Your First Story — Free
 </a>
+</div>
 </section>
 
 </main>
 
-<!-- Footer -->
-<footer class="w-full rounded-t-[3rem] mt-16 bg-[#f8f3ec]">
+<footer class="w-full rounded-t-[3rem] mt-10 bg-[#f9ecdc]">
 <div class="max-w-7xl mx-auto px-8 py-16">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
 <div class="space-y-6">
 <div class="flex items-center">
 <span class="text-lg font-bold text-primary">Kippo</span>
 </div>
-<p class="text-[#625f58] leading-relaxed">Personalized audio stories that spark imagination, teach values, and make bedtime magical.</p>
+<p class="text-on-surface-variant leading-relaxed">Personalized audio stories that spark imagination, teach values, and make bedtime magical.</p>
 </div>
 <div>
 <h4 class="font-bold mb-6 text-primary">Product</h4>
-<ul class="space-y-4 text-[#625f58]">
+<ul class="space-y-4 text-on-surface-variant">
 <li><a class="hover:text-primary transition-colors" href="#how-it-works">How It Works</a></li>
 <li><a class="hover:text-primary transition-colors" href="#features">Features</a></li>
 <li><a class="hover:text-primary transition-colors" href="#pricing">Pricing</a></li>
@@ -498,21 +693,21 @@ Your story library is yours forever — even if you stop paying, the stories you
 </div>
 <div>
 <h4 class="font-bold mb-6 text-primary">Support</h4>
-<ul class="space-y-4 text-[#625f58]">
+<ul class="space-y-4 text-on-surface-variant">
 <li><a class="hover:text-primary transition-colors" href="contact.html">Contact Us</a></li>
 <li><a class="hover:text-primary transition-colors" href="#faq">FAQ</a></li>
 </ul>
 </div>
 <div>
 <h4 class="font-bold mb-6 text-primary">Legal</h4>
-<ul class="space-y-4 text-[#625f58]">
+<ul class="space-y-4 text-on-surface-variant">
 <li><a class="hover:text-primary transition-colors" href="https://app.getkippo.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
 <li><a class="hover:text-primary transition-colors" href="https://app.getkippo.com/terms" target="_blank" rel="noopener noreferrer">Terms of Service</a></li>
 </ul>
 </div>
 </div>
-<div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-outline-variant/20 gap-8">
-<p class="text-sm text-[#625f58]">&copy; 2026 Kippo. All rights reserved.</p>
+<div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-[#dccab6]/70 gap-8">
+<p class="text-sm text-on-surface-variant">&copy; 2026 Kippo. All rights reserved.</p>
 </div>
 </div>
 </footer>
