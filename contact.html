@@ -24,6 +24,61 @@
     'allow_ad_personalization_signals': false
   });
 </script>
+<script>
+  (function (window, document) {
+    const pixelId = '1114694587562748';
+    const preferenceName = 'kippo_advertising_cookies';
+    const gpcEnabled = navigator.globalPrivacyControl === true;
+    const optedOut = document.cookie.split('; ').some(function (cookie) {
+      return cookie === preferenceName + '=denied';
+    });
+    let pixelLoaded = false;
+
+    function setPreference(allowed) {
+      document.cookie = preferenceName + '=' + (allowed ? 'allowed' : 'denied') + '; Max-Age=31536000; Path=/; Domain=.getkippo.com; SameSite=Lax; Secure';
+    }
+
+    function deleteMetaCookies() {
+      ['_fbp', '_fbc'].forEach(function (name) {
+        document.cookie = name + '=; Max-Age=0; Path=/; Domain=.getkippo.com; SameSite=Lax; Secure';
+        document.cookie = name + '=; Max-Age=0; Path=/; SameSite=Lax';
+      });
+    }
+
+    function loadPixel() {
+      if (pixelLoaded || gpcEnabled) return;
+      pixelLoaded = true;
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+      (window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('set', 'autoConfig', false, pixelId);
+      fbq('init', pixelId, {});
+      fbq('trackSingle', pixelId, 'PageView');
+    }
+
+    function setAdvertisingAllowed(allowed) {
+      if (gpcEnabled) return;
+      setPreference(allowed);
+      if (allowed) {
+        if (window.fbq) fbq('consent', 'grant');
+        loadPixel();
+      } else {
+        if (window.fbq) fbq('consent', 'revoke');
+        deleteMetaCookies();
+      }
+    }
+
+    window.kippoAdvertisingPrivacy = {
+      gpcEnabled: gpcEnabled,
+      allowed: !gpcEnabled && !optedOut,
+      setAllowed: setAdvertisingAllowed
+    };
+
+    if (!gpcEnabled && !optedOut) loadPixel();
+  })(window, document);
+</script>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
@@ -244,6 +299,7 @@
 <ul class="space-y-4 text-[#625f58]">
 <li><a class="hover:text-primary transition-colors" href="https://app.getkippo.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
 <li><a class="hover:text-primary transition-colors" href="https://app.getkippo.com/terms" target="_blank" rel="noopener noreferrer">Terms of Service</a></li>
+<li><button class="privacy-choices-open hover:text-primary transition-colors text-left" type="button">Your Privacy Choices</button></li>
 </ul>
 </div>
 </div>
@@ -252,6 +308,53 @@
 </div>
 </div>
 </footer>
+
+<dialog id="privacy-choices" class="m-auto w-[calc(100%-2rem)] max-w-md rounded-2xl bg-white p-0 text-on-surface shadow-2xl backdrop:bg-[#0f172a]/40">
+<form method="dialog" class="space-y-6 p-6 sm:p-8">
+<div class="space-y-3">
+<h2 class="font-headline text-2xl font-bold">Your Privacy Choices</h2>
+<p class="text-on-surface-variant leading-relaxed">Kippo uses advertising cookies to measure our ads and to show Kippo ads to parents who have visited our website. Turning them off doesn't change how Kippo works.</p>
+</div>
+<label id="advertising-cookies-toggle-row" class="flex cursor-pointer items-center justify-between gap-4 font-semibold">
+<span>Allow advertising cookies</span>
+<input id="advertising-cookies-toggle" type="checkbox" class="h-5 w-5 rounded border-outline-variant text-primary focus:ring-primary"/>
+</label>
+<p id="gpc-message" class="hidden rounded-xl bg-surface-container p-4 text-on-surface-variant">Your browser is sending a Global Privacy Control signal, so advertising cookies are off.</p>
+<a class="inline-block font-semibold text-primary underline underline-offset-4" href="https://app.getkippo.com/privacy" target="_blank" rel="noopener noreferrer">Read our Privacy Policy →</a>
+<button class="w-full rounded-xl bg-primary px-6 py-3 font-bold text-on-primary hover:opacity-90" value="save">Save</button>
+</form>
+</dialog>
+
+<script>
+  (function () {
+    const privacy = window.kippoAdvertisingPrivacy;
+    const dialog = document.getElementById('privacy-choices');
+    const toggle = document.getElementById('advertising-cookies-toggle');
+    const toggleRow = document.getElementById('advertising-cookies-toggle-row');
+    const gpcMessage = document.getElementById('gpc-message');
+
+    if (privacy.gpcEnabled) {
+      toggleRow.classList.add('hidden');
+      gpcMessage.classList.remove('hidden');
+    } else {
+      toggle.checked = privacy.allowed;
+      toggle.addEventListener('change', function () {
+        privacy.setAllowed(toggle.checked);
+      });
+    }
+
+    document.querySelectorAll('.privacy-choices-open').forEach(function (button) {
+      button.addEventListener('click', function () {
+        if (!privacy.gpcEnabled) toggle.checked = privacy.allowed;
+        dialog.showModal();
+      });
+    });
+
+    dialog.addEventListener('click', function (event) {
+      if (event.target === dialog) dialog.close();
+    });
+  })();
+</script>
 
 <script>
       const form = document.getElementById("contact-form");
